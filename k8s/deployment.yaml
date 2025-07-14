@@ -14,6 +14,11 @@ spec:
       labels:
         app: jenkins-app
     spec:
+      tolerations:
+      - key: "workload"
+        operator: "Equal"
+        value: "app"
+        effect: "NoSchedule"
       containers:
         - name: jenkins-app
           image: mohamed2200/jenkins-app:latest
