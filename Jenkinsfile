@@ -1,7 +1,7 @@
 @Library('my-lib') _  
 
 pipeline {
-    agent { label 'build-agent' }
+    agent { label 'worker-1' }
 
     stages {
         stage('Run Unit Tests') {
