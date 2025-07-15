@@ -3,6 +3,11 @@
 pipeline {
     agent { label 'worker-1' }
 
+environment {
+    IMAGE_NAME = 'mohamed2200/jenkins-app'
+    IMAGE_TAG  = 'latest'
+    }
+
     stages {
         stage('Run Unit Tests') {
             steps { runUnitTest() }
